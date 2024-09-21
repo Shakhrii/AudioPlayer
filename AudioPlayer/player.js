@@ -5,24 +5,29 @@ const btn_next = document.querySelector('.btn-next');
 const progressTime = document.querySelector('.current-time');
 const progressDuration = document.querySelector('.duration');
 const progressBar = document.querySelector("#progress-bar");
+const overlay = document.querySelector('.overlay');
+const cover = document.querySelector('.cover');
 
 var isPlay = false;
 var currentTime = 0;
 var duration = 0;
 var currentTrackId = 0;
 
-const tracks = ["./assets/audio/nervi_nervi.mp3", 
-    "./assets/audio/nervi_voroni.mp3",
-    "./assets/audio/nervi_cofe_moi_drug.mp3"];
+const tracks = [{artist: 'Нервы', song: 'Нервы', link: './assets/audio/nervi_nervi.mp3', picture: './assets/image/nervi.jpeg'},
+    {artist: 'Слот', song: 'Бой', link: './assets/audio/slot_boi.mp3', picture: './assets/image/slot.jpeg'},
+    {artist: 'Lumen', song: 'Электричество', link: './assets/audio/lumen_electrichestvo.mp3', picture: './assets/image/lumen.jpeg'}];
 
 function playAudio(track) {
-    audio.src = track;
+    audio.src = track.link;
     audio.currentTime = currentTime;
     audio.onloadeddata = function() {
         duration = audio.duration;
         showDuration(duration);
     }
     if (!isPlay) {
+        btn_play.classList.add('played');
+        overlay.style.backgroundImage = 'url(' + track.picture + ')';
+        cover.style.backgroundImage = 'url(' + track.picture + ')';
         audio.play();
         audio.addEventListener('timeupdate', (event) => {
             currentTime = Math.floor(audio.currentTime);
@@ -31,6 +36,7 @@ function playAudio(track) {
         }, false);
 
     } else {
+        btn_play.classList.remove('played');
         audio.pause();
     }
 
