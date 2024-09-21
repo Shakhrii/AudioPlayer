@@ -10,6 +10,23 @@
 </head>
 <body>
     <div class="wrapper">
+        <div class="audio__wrapper">
+            <audio id="audio">
+            </audio>
+            <button class="btn btn-play"></button>
+
+            <div class="information">
+                <div class="navigation">
+                    <button class="btn btn-prev"></button>
+                    <progress id="progress-bar" value="0" max="1"></progress>
+                    <button class="btn btn-next"></button>
+                </div>
+                <div class="time-info">
+                    <div class="current-time">00 : 00</div>
+                    <div class="duration">00 : 00</div>
+                </div>
+            </div>
+        </div>
     </div>
     <script type="text/javascript" src="./player.js"></script>
 </body>
