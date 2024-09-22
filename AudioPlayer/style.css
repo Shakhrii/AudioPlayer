@@ -70,10 +70,6 @@
     background-image: url(./assets/icon/play_hover.svg);
 }
 
-/* .btn-play:active {
-    background-image: url(./assets/icon/pause_active.svg);
-} */
-
 .played {
     background-image: url(./assets/icon/pause_icon.svg);
 }
@@ -82,16 +78,9 @@
     background-image: url(./assets/icon/pause_hover.svg);
 }
 
-/* .played:active {
-    background-image: url(./assets/icon/play_active.svg);
-} */
-
-
 .information {
     width: 100%;
-    /* position: absolute; */
     bottom: 2em;
-    /* left: center; */
     display: flex;
     flex-direction: column;
 }
@@ -155,10 +144,6 @@ progress:hover {
     background-image: url(./assets/icon/prev_hover.svg);
 }
 
-/* .btn-prev:active {
-    background-image: url(./assets/icon/prev_active.svg);
-} */
-
 .btn-next {
     background-image: url(./assets/icon/next.svg);
 }
@@ -166,7 +151,3 @@ progress:hover {
 .btn-next:hover {
     background-image: url(./assets/icon/next_hover.svg);
 }
-/* 
-.btn-next:active {
-    background-image: url(./assets/icon/next_active.svg);
-} */
