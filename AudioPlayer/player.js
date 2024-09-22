@@ -26,12 +26,12 @@ function playAudio(track) {
         duration = audio.duration;
         showDuration(duration);
     }
+    overlay.style.backgroundImage = 'url(' + track.picture + ')';
+    cover.style.backgroundImage = 'url(' + track.picture + ')';
+    song.innerText = track.song;
+    artist.innerText = track.artist;
     if (!isPlay) {
         btn_play.classList.add('played');
-        overlay.style.backgroundImage = 'url(' + track.picture + ')';
-        cover.style.backgroundImage = 'url(' + track.picture + ')';
-        song.innerText = track.song;
-        artist.innerText = track.artist;
         audio.play();
         audio.addEventListener('timeupdate', (event) => {
             currentTime = Math.floor(audio.currentTime);
@@ -46,6 +46,7 @@ function playAudio(track) {
 
     isPlay = !isPlay;
 }
+
 
 const navigationClick = (currentTrackId) => {
     isPlay = !isPlay;
