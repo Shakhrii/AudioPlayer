@@ -23,6 +23,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: rgba(66, 66, 202, 0.7);
+    background-blend-mode: multiply;
     filter: blur(1rem);
 }
 
@@ -40,7 +42,11 @@
     background-color: white;
     gap: 1em;
     border-radius: 0.2rem;
-    box-shadow: 5.5px 6px 10px 5px #b3b3b3;;
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(0, 4, 7, 0.6);
+    -moz-box-shadow: 5px 5px 5px -5px rgba(0, 4, 7, 0.6);
+    box-shadow: 5px 5px 5px -5px rgba(0, 4, 7, 0.6);
+
+
 }
 
 .cover {
@@ -84,7 +90,24 @@
     /* left: center; */
     display: flex;
     flex-direction: column;
-    padding: 0 2em;
+}
+
+.information__name {
+    color: rgb(73, 73, 235);
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+
+.song {
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: #5b5b5c;
+}
+
+.artist {
+    font-size: 0.8rem;
+    text-transform: lowercase;
+    font-weight: bold;
 }
 
 .time-info {
@@ -93,13 +116,13 @@
     align-items: center;
     justify-content: space-between;
     font-size: 0.7em;
-    color: 6c757d;
+    color: #adb5bd;
     margin-top: 0.3rem;
 }
 
-progress::-moz-progress-bar { background: blue; }
-progress::-webkit-progress-value { background: blue; }
-progress { color: blue; }
+progress::-moz-progress-bar { background: rgb(73, 73, 235); }
+progress::-webkit-progress-value { background: #4949eb; }
+progress { color: rgb(73, 73, 235); }
 
 
 progress {

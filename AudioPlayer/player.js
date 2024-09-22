@@ -7,6 +7,8 @@ const progressDuration = document.querySelector('.duration');
 const progressBar = document.querySelector("#progress-bar");
 const overlay = document.querySelector('.overlay');
 const cover = document.querySelector('.cover');
+const song = document.querySelector('.song');
+const artist = document.querySelector('.artist');
 
 var isPlay = false;
 var currentTime = 0;
@@ -28,6 +30,8 @@ function playAudio(track) {
         btn_play.classList.add('played');
         overlay.style.backgroundImage = 'url(' + track.picture + ')';
         cover.style.backgroundImage = 'url(' + track.picture + ')';
+        song.innerText = track.song;
+        artist.innerText = track.artist;
         audio.play();
         audio.addEventListener('timeupdate', (event) => {
             currentTime = Math.floor(audio.currentTime);
