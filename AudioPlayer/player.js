@@ -10,7 +10,7 @@ const cover = document.querySelector('.cover');
 const song = document.querySelector('.song');
 const artist = document.querySelector('.artist');
 
-var isPlay = false;
+var isPlay = true;
 var currentTime = 0;
 var duration = 0;
 var currentTrackId = 0;
@@ -35,8 +35,13 @@ function playAudio(track) {
         audio.play();
         audio.addEventListener('timeupdate', (event) => {
             currentTime = Math.floor(audio.currentTime);
+            if (audio.currentTime == duration) {
+                nextClick();
+                
+            } else {
             showTime(currentTime);
             showProgress();
+            }
         }, false);
 
     } else {
@@ -108,14 +113,16 @@ btn_prev.addEventListener('click', () => {
     navigationClick(currentTrackId);
 });
 
-btn_next.addEventListener('click', () => {
+const nextClick = () => {
     if (!(currentTrackId == tracks.length - 1)) {
         currentTrackId++;
     } else {
         currentTrackId = 0;
     }
     navigationClick(currentTrackId);
-})
+}
+btn_next.addEventListener('click', nextClick);
 
 progressBar.addEventListener('click', clickProgress);
+playAudio(tracks[0]);
 
