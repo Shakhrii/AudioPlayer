@@ -1,6 +1,13 @@
 * {
     box-sizing: border-box;
 }
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .btn {
     border-radius: 50%;
     width: 3rem;
@@ -28,6 +35,9 @@
     filter: blur(1rem);
     -webkit-transition: background-image 0.5s ease-in-out;
     transition: background-image 0.5s ease-in-out;
+    inset: 0;
+    backdrop-filter: blur(2px);
+
 }
 
 .audio__wrapper {
@@ -150,4 +160,23 @@ progress:hover {
 
 .btn-next:hover {
     background-image: url(./assets/icon/next_hover.svg);
+}
+
+.footer {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    gap: 1em;
+}
+
+.github-img {
+    width: 2em;
+    height: 2em;
+}
+
+.rssschool-img {
+    width: 2em;
+    height: 2em;
 }
