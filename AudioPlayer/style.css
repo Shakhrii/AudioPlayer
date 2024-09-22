@@ -26,6 +26,8 @@
     background-color: rgba(66, 66, 202, 0.7);
     background-blend-mode: multiply;
     filter: blur(1rem);
+    -webkit-transition: background-image 0.5s ease-in-out;
+    transition: background-image 0.5s ease-in-out;
 }
 
 .audio__wrapper {
@@ -56,6 +58,8 @@
     background-position: center;
     background-size: cover;
     box-sizing: border-box;
+    -webkit-transition: background-image 0.5s ease;
+    transition: background-image 0.5s ease;
 }
 
 .btn-play {
